@@ -23,14 +23,14 @@ This project implements a deepfake-proof electronic Know Your Customer (eKYC) pi
    ```
    pip install -r requirements.txt
    ```
-2. Update dataset path (`BASE_PATH`) in the notebook or script.
+2. Update dataset path (`BASE_PATH`) in the notebook and script.
 3. Run training cells to fine-tune deepfake detection model.
 
 ### Inference
 - Use the `process_input` function to predict match score, liveness score, and authenticity label on images or videos.
 
 ### Grad-CAM
-- Use the `grad_cam` function for explanation heatmaps highlighting decision regions.
+- Use the `grad_cam` function for explanation heatmaps highlighting decision regions. (in inference.py)
 
 ### Deployment
 - Run the included Streamlit app (`app.py`) for live demo at:
@@ -54,6 +54,8 @@ This project implements a deepfake-proof electronic Know Your Customer (eKYC) pi
 - `app.py` — Streamlit demo web app
 - `deepfake_model.pth` — Saved model weights
 - `requirements.txt` — Library dependencies
+- `final_notebook.ipynb` — Notebook (used for development of model)
+- `Sentinel_FaceV1.zip` — Dataset
 
 ## Results
 - Achieves ~0.9 AUC F1 score on validation set (example metric).
